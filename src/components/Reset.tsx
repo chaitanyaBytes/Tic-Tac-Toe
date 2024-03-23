@@ -9,8 +9,7 @@ export function Reset() {
   const setWinner = useSetRecoilState(winState);
 
   function resetGame() {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setBoxes((boxes) => boxes.map((box) => (box = "")));
+    setBoxes((boxes) => Array(boxes.length).fill(""));
     setPlayer("O");
     setWinner([false,""]);
   }
