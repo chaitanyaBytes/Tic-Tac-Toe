@@ -6,7 +6,7 @@ import { Reset } from "./Reset.tsx";
 export function Game() {
   return (
     <div className="flex flex-col items-center">
-      <div className="mt-[25%] md:mt-[2%]">
+      <div className="mt-[15%] md:mt-[2%]">
         <Player></Player>
       </div>
       <div className="my-[20%] md:my-[6%]">
