@@ -1,23 +1,18 @@
 import { RecoilRoot } from "recoil";
-import { Board } from "./components/board.tsx";
-import { Player } from "./components/Player.tsx";
-import { WinnerCard } from "./components/WinnerCard.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Game } from "./components/Game";
+import { Landing } from "./components/Landing";
 
 function App() {
   return (
     <>
       <RecoilRoot>
-        <div className="flex flex-col items-center">
-          <div className="mt-[2%]">
-            <Player></Player>
-          </div>
-          <div className="my-[6%]">
-            <Board></Board>
-          </div>
-          <div className="mb-[2%]">
-            <WinnerCard></WinnerCard>
-          </div>
-        </div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Landing/>}></Route>
+            <Route path="/Game" element={<Game/>}></Route>
+          </Routes>
+        </Router>
       </RecoilRoot>
     </>
   );
