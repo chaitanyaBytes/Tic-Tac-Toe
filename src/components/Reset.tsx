@@ -1,6 +1,18 @@
+import { useSetRecoilState } from "recoil";
+import { boxesState } from "../store/boxes";
+import { playerState } from "../store/player";
+import { winState } from "../store/win";
+
 export function Reset() {
+  const setBoxes = useSetRecoilState(boxesState);
+  const setPlayer = useSetRecoilState(playerState);
+  const setWinner = useSetRecoilState(winState);
+
   function resetGame() {
-    window.location.reload();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    setBoxes((boxes) => boxes.map((box) => (box = "")));
+    setPlayer("O");
+    setWinner([false,""]);
   }
 
   return (
