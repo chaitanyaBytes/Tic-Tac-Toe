@@ -6,14 +6,14 @@ import { Reset } from "./Reset.tsx";
 export function Game() {
   return (
     <div className="flex flex-col items-center">
-      <div className="mt-[2%]">
+      <div className="mt-[25%] md:mt-[2%]">
         <Player></Player>
       </div>
-      <div className="my-[6%]">
+      <div className="my-[20%] md:my-[6%]">
         <Board></Board>
         <Reset></Reset>
       </div>
-      <div className="flex items-baseline gap-5 mb-[2%]">
+      <div className="mt-[12%] md:mt-[0%]">
         <WinnerCard></WinnerCard>
       </div>
     </div>
