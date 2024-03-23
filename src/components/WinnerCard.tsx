@@ -7,12 +7,7 @@ export function WinnerCard() {
   const boxes = useRecoilValue(boxesState);
 
   function boxesFull(boxes: string[]) {
-    for (let i = 0; i < boxes.length; i++) {
-      if (!boxes[i]) {
-        return false;
-      }
-    }
-    return true;
+    return boxes.every((box) => box !== "");
   }
 
   return (
