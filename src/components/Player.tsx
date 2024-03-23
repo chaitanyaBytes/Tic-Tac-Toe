@@ -20,13 +20,13 @@ export function Player() {
   return (
     <>
       {!winner[0] && !boxesFull(boxes) && (
-        <div className="h-16 w-80 bg-sky-500 rounded-xl text-center text-3xl pt-3 font-semibold shadow-[0px_0px_20px_10px_rgba(0,0,0,0.1)] shadow-pink-700">
+        <div className="h-16 w-80 bg-rose-500 rounded-xl text-center text-3xl pt-3 font-semibold shadow-[0px_0px_20px_5px_rgba(0,0,0,0.1)] shadow-blue-700">
           Current Player: {player}
         </div>
       )}
 
       {(winner[0] || boxesFull(boxes)) && (
-        <div className="h-16 w-80 bg-red-700 rounded-full text-center text-3xl pt-3 font-bold">
+        <div className="h-16 w-80 bg-red-600 rounded-full text-center text-3xl pt-3 font-bold shadow-[0px_0px_20px_5px_rgba(0,0,0,0.1)] shadow-blue-400">
           GAME OVER!
         </div>
       )}
